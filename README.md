@@ -33,3 +33,34 @@ Some practice questions on satellite navigation
     1. 理解.n文件文件头和数据的含义；
     2. 计算卫星的三维位置；
     3. 链接中给出的数据是GPS的，可自行下载北斗或伽利略的数据计算卫星位置；下载链接可参考：[北斗/GNSS相关数据下载地址合集（未整理完）GAMIT/BERNESE - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/285099374)
+
+
+## Practice I: Parallel acquisition of L1 C/A code signal
+- Recommended duration: About 3 to 4 hours
+- Tool: MATLAB
+- Content
+1. Generated signal: information rate 50bps, pseudo-code rate 1.023MHz, code length 1023, self-set IF frequency, Doppler frequency and pseudo-code phase offset, BPSK modulation, signal-to-noise ratio of 30dB;
+2. Set the integration time and capture the signal by coherent or incoherent integration;
+- Requirement
+1. Figure Doppler and pseudo-code capture results;
+## Practice II: Using Kalman filter to simulate target tracking process
+- Recommended time: about 3-4h
+- Tool: MATLAB
+- Content
+1. Model establishment: the initial distance is 80km, the speed is 8km/s, the sampling interval is 0.5s, the measurement model is the distance from the target to the sensor, its noise standard deviation km, the state vector of the model is the distance and its rate of change, the speed noise standard deviation in the driving of the vehicle (all are Gaussian white noise), the total observation time of the model is 20s
+2. Generate real values and measured values according to the model;
+3. Calculate the estimated value according to the Kalman filter;
+- Requirement
+1. Display the real curve, measurement curve and filter curve of distance and speed;
+2. Display deviation curve and RMSE curve of distance and speed;
+3. Kalman gain curve and covariance curve showing distance and speed;
+## Practice content III: Satellite position calculation based on ephemeris data
+- Recommended time: about 3-4h
+- Tool: MATLAB
+- Content
+1. Read the.n ephemeris file and extract satellite parameters from it;
+2. Calculate the satellite position according to the corresponding parameters;
+- Requirement
+1. Understand the meaning of the header and data in an.n file.
+2. Calculate the three-dimensional position of the satellite;
+3. The data given in the link is GPS, you can download the data of Beidou or Galileo to calculate the satellite position;
